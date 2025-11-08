@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  son-of-anton:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=gpt-4o-mini
+    volumes:
+      - /tmp/son-of-anton-data:/tmp/son-of-anton-data
